@@ -3,15 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HelloComponent } from './hello/hello.component';
 import { FormComponent } from './form/form.component';
-
+import { ResourcesComponent } from './resources/resources.component';
 
 const routes: Routes = [
   { path: '', component: HelloComponent },
-  { path: 'form', component: FormComponent }
+  { path: 'form', component: FormComponent },
+  { path: 'resources', component: ResourcesComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
