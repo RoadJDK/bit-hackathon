@@ -8,13 +8,15 @@ import { FormComponent } from './form/form.component';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResourcesComponent } from './resources/resources.component';
+import { LanguageComponent } from './language/language.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     FormComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,
