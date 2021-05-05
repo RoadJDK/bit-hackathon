@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { FormComponent } from './form/form.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResourcesComponent } from './resources/resources.component';
 import { LanguageComponent } from './language/language.component';
@@ -16,15 +16,15 @@ import { LanguageComponent } from './language/language.component';
     HelloComponent,
     FormComponent,
     ResourcesComponent,
-    LanguageComponent
+    LanguageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
