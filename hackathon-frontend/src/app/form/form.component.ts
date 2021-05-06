@@ -8,24 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) {}
-
-  asylForm = this.formBuilder.group({
-    suchtAsyl:['']
-  })
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  nextPage() {
-    if (this.searchingAsyl == true && this.unlocked == true) {
-     // this.router.navigateByUrl('/process');
-    } else if (this.unlocked == true) {
-      //this.router.navigateByUrl('/resources');
-    }
-  }
-
   searchingAsyl;
   unlocked = false;
+  language;
 
   changeToYes() {
     this.searchingAsyl = true;
@@ -35,5 +24,14 @@ export class FormComponent implements OnInit {
   changeToNo() {
     this.searchingAsyl = false;
     this.unlocked = true;
+  }
+
+  nextPage() {
+    if (this.searchingAsyl == true && this.unlocked == true) {
+      this.router.navigateByUrl('/process');
+    } else if (this.unlocked == true) {
+      this.router.navigateByUrl('/resources');
+    }
+    this.unlocked = false;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 interface Lang {
@@ -13,17 +13,18 @@ interface Lang {
   styleUrls: ['./language.component.scss'],
 })
 export class LanguageComponent implements OnInit {
+  @Output()
   nextComponent = new EventEmitter<string>();
+
+  callParent() {
+    this.nextComponent.emit('go to next component');
+  }
 
   constructor(private formBuilder: FormBuilder) {}
 
   selectedLang: string;
 
   ngOnInit(): void {}
-
-  callParent() {
-    this.nextComponent.emit('go to next component');
-  }
 
   scrollIntoView($element): void {
     console.log($element);
@@ -36,14 +37,8 @@ export class LanguageComponent implements OnInit {
 
   langs: Lang[] = [
     { value: 'de', viewValue: 'Deutsch', icon: '🇩🇪' },
-    { value: 'fr', viewValue: 'Französisch', icon: '🇫🇷' },
-    { value: 'it', viewValue: 'Italienisch', icon: '🇮🇹' },
-    { value: 'al', viewValue: 'Albanisch', icon: '🇦🇱' },
-    { value: 'ae', viewValue: 'Arabisch', icon: '🇦🇪' },
-    { value: 'en', viewValue: 'Englisch', icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿' },
-    { value: 'pt', viewValue: 'Portugiesisch', icon: '🇵🇹' },
-    { value: 'ru', viewValue: 'Russisch', icon: '🇷🇺' },
-    { value: 'rs', viewValue: 'Serbisch', icon: '🇷🇸' },
-    { value: 'es', viewValue: 'Spanisch', icon: '🇪🇸' },
+    { value: 'fr', viewValue: 'Français', icon: '🇫🇷' },
+    { value: 'it', viewValue: 'Italiano', icon: '🇮🇹' },
+    { value: 'en', viewValue: 'English', icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿' },
   ];
 }
