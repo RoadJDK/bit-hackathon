@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { MatRadioChange } from '@angular/material/radio';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,35 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  constructor(private router: Router, private formBuilder: FormBuilder) {}
-
-  lookingForAsyl = false;
-
-  infoForm = this.formBuilder.group({
-    suchtAsyl: [''],
-  });
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  change(event: MatRadioChange, data) {
-    this.lookingForAsyl = true;
+  nextPage() {
+    if (this.searchingAsyl == true && this.unlocked == true) {
+      this.router.navigateByUrl('/process');
+    } else if (this.unlocked == true) {
+      this.router.navigateByUrl('/resources');
+    }
   }
 
   searchingAsyl;
+  unlocked = false;
 
   changeToYes() {
     this.searchingAsyl = true;
+    this.unlocked = true;
   }
 
   changeToNo() {
     this.searchingAsyl = false;
-  }
-
-  nextPage() {
-    if (this.searchingAsyl == true) {
-      this.router.navigateByUrl('/process');
-    } else {
-      this.router.navigateByUrl('/resources');
-    }
+    this.unlocked = true;
   }
 }
