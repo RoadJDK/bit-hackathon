@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="components">
+    <div class="hello">
+      <app-hello (nextComponent)="scrollIntoView(language)"></app-hello>
+    </div>
+    <div class="space"></div>
+    <div #language class="language">
+      <app-language (nextComponent)="scrollIntoView(form)"></app-language>
+    </div>
+    <div class="space"></div>
+    <div #form class="form">
+      <app-form></app-form>
+    </div>
+    <div class="space"></div>
+  </div>
+</div>
