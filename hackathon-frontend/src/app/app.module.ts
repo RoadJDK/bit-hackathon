@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResourcesComponent } from './resources/resources.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { LanguageComponent } from './language/language.component';
@@ -17,7 +17,9 @@ import { ProcessComponent } from './process/process.component';
 import { InfoComponent } from './info/info.component';
 import { MatTreeModule} from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
-
+import { DevExtremeModule } from 'devextreme-angular';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { DxTreeViewModule, DxSelectBoxModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatRadioModule,
     MatFormFieldModule,
     MatTreeModule,
-    MatIconModule
+    MatIconModule,
+    DevExtremeModule,
+    DxTreeViewModule,
+    DxSelectBoxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

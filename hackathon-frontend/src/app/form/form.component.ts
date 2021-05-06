@@ -8,15 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private formBuilder: FormBuilder) {}
+
+  asylForm = this.formBuilder.group({
+    suchtAsyl:['']
+  })
 
   ngOnInit(): void {}
 
   nextPage() {
     if (this.searchingAsyl == true && this.unlocked == true) {
-      this.router.navigateByUrl('/process');
+     // this.router.navigateByUrl('/process');
     } else if (this.unlocked == true) {
-      this.router.navigateByUrl('/resources');
+      //this.router.navigateByUrl('/resources');
     }
   }
 
