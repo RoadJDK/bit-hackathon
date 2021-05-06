@@ -1,4 +1,5 @@
 @import "node_modules/@oblique/oblique/styles/css";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 $primary: rgb(255, 255, 255);
 
@@ -80,6 +81,23 @@ button {
     text-decoration: none;
   }
 }
+
+.full-width {
+  width: 100%;
+}
+
+.top-padding {
+  padding-top: 3px;
+}
+
+.margin-left mat-radio-button:not(:first-child) {
+  margin-left: 10px;
+}
+
+.form-container {
+  margin: 100px;
+}
+
 html,
 body {
   height: 100%;
