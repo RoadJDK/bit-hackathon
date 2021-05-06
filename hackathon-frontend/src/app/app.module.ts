@@ -15,6 +15,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { LanguageComponent } from './language/language.component';
 import { ProcessComponent } from './process/process.component';
 import { InfoComponent } from './info/info.component';
+import { MatTreeModule} from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { InfoComponent } from './info/info.component';
     ReactiveFormsModule,
     MatCardModule,
     MatRadioModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTreeModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
