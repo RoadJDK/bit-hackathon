@@ -3,20 +3,18 @@
     <h1>Hey, planen Sie etwa ein Asyl zu beantragen?</h1>
   </div>
   <div class="row">
-    <div class="col-md-12">
-      <mat-radio-group formControlName="suchtAsyl" class="margin-left">
-        <mat-radio-button (click)="changeToYes()" value="true">
-          Ja
-        </mat-radio-button>
-        <mat-radio-button
-          (click)="changeToNo()"
-          value="false"
-          style="margin-left: 100px"
-        >
-          Nein
-        </mat-radio-button>
-      </mat-radio-group>
-    </div>
+    <mat-radio-group formControlName="suchtAsyl" class="margin-left">
+      <mat-radio-button (click)="changeToYes()" value="true">
+        Ja
+      </mat-radio-button>
+      <mat-radio-button
+        (click)="changeToNo()"
+        value="false"
+        style="margin-left: 100px"
+      >
+        Nein
+      </mat-radio-button>
+    </mat-radio-group>
   </div>
 
   <button
