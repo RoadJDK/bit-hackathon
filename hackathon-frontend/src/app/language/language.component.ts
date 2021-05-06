@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+
+interface Lang {
+  value: string;
+  viewValue: string;
+  icon: string;
+}
 
 @Component({
   selector: 'app-language',
@@ -7,9 +14,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder:FormBuilder) {}
+
+  selectedLang: string;
 
   ngOnInit(): void {
   }
 
+  langs: Lang[] = [
+    {value: 'de', viewValue: 'Deutsch', icon: '🇩🇪'},
+    {value: 'fr', viewValue: 'Französisch', icon: '🇫🇷'},
+    {value: 'it', viewValue: 'Italienisch', icon: '🇮🇹'},
+    {value: 'al', viewValue: 'Albanisch', icon: '🇦🇱'},
+    {value: 'ae', viewValue: 'Arabisch', icon: '🇦🇪'},
+    {value: 'en', viewValue: 'Englisch', icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿'},
+    {value: 'pt', viewValue: 'Portugiesisch', icon: '🇵🇹'},
+    {value: 'ru', viewValue: 'Russisch', icon: '🇷🇺'},
+    {value: 'rs', viewValue: 'Serbisch', icon: '🇷🇸'},
+    {value: 'es', viewValue: 'Spanisch', icon: '🇪🇸'}
+  ]
 }

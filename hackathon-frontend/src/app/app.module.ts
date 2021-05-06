@@ -35,7 +35,8 @@ import { InfoComponent } from './info/info.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],
