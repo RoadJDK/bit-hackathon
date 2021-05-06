@@ -31,7 +31,8 @@ import { LanguageComponent } from './language/language.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],
