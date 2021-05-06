@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 interface Lang {
@@ -13,17 +13,18 @@ interface Lang {
   styleUrls: ['./language.component.scss'],
 })
 export class LanguageComponent implements OnInit {
+  @Output()
   nextComponent = new EventEmitter<string>();
+
+  callParent() {
+    this.nextComponent.emit('go to next component');
+  }
 
   constructor(private formBuilder: FormBuilder) {}
 
   selectedLang: string;
 
   ngOnInit(): void {}
-
-  callParent() {
-    this.nextComponent.emit('go to next component');
-  }
 
   scrollIntoView($element): void {
     console.log($element);

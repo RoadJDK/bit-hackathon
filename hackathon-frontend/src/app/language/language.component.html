@@ -13,13 +13,8 @@
       </mat-form-field>
     </div>
   </div>
-  <p>Selected Language: {{ selectedLang }}</p>
-  <button
-    mat-raised-button
-    color="primary"
-    style="margin-top: 25px"
-    (click)="callParent()"
-  >
+  <p>Ausgewählte Sprache: {{ selectedLang }}</p>
+  <a mat-raised-button style="margin-top: 25px" (click)="callParent()">
     Weiter
-  </button>
+  </a>
 </form>
