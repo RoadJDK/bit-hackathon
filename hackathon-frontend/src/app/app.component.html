@@ -1,15 +1,28 @@
 <header>
-    <div class="container">
-      <a routerLink="/" class="logo">hello switzerland</a>
-      <nav>
-        <ul>
-          <li><a href="#" routerLink="/">Hello</a></li>
-          <li><a href="#" routerLink="/form">Form</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="container">
+    <a routerLink="/" class="logo">hello switzerland</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/">Hello</a></li>
+        <li><a href="#" routerLink="/form">Form</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
-  <router-outlet></router-outlet>
+  <div class="components">
+    <div class="hello">
+      <app-hello></app-hello>
+    </div>
+    <div class="space"></div>
+    <div class="language">
+      <app-language></app-language>
+    </div>
+    <div class="space"></div>
+    <div class="form">
+      <app-form></app-form>
+    </div>
+    <div class="space"></div>
+  </div>
 </div>
