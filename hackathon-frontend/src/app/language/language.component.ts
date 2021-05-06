@@ -36,14 +36,8 @@ export class LanguageComponent implements OnInit {
 
   langs: Lang[] = [
     { value: 'de', viewValue: 'Deutsch', icon: '🇩🇪' },
-    { value: 'fr', viewValue: 'Französisch', icon: '🇫🇷' },
-    { value: 'it', viewValue: 'Italienisch', icon: '🇮🇹' },
-    { value: 'al', viewValue: 'Albanisch', icon: '🇦🇱' },
-    { value: 'ae', viewValue: 'Arabisch', icon: '🇦🇪' },
-    { value: 'en', viewValue: 'Englisch', icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿' },
-    { value: 'pt', viewValue: 'Portugiesisch', icon: '🇵🇹' },
-    { value: 'ru', viewValue: 'Russisch', icon: '🇷🇺' },
-    { value: 'rs', viewValue: 'Serbisch', icon: '🇷🇸' },
-    { value: 'es', viewValue: 'Spanisch', icon: '🇪🇸' },
+    { value: 'fr', viewValue: 'Français', icon: '🇫🇷' },
+    { value: 'it', viewValue: 'Italiano', icon: '🇮🇹' },
+    { value: 'en', viewValue: 'English', icon: '🏴󠁧󠁢󠁥󠁮󠁧󠁿' },
   ];
 }
