@@ -2,4 +2,33 @@
   <div class="centered">
     <h4>Empfohlene Artikel</h4>
   </div>
+
+  <div class="form">
+    <dx-tree-view
+    #treeview
+    [width]="500"
+    [items]="themes"
+    searchMode="contains"
+    [searchEnabled]="true"
+    (onItemContextMenu)="treeViewItemContextMenu($event)"
+    ></dx-tree-view>
+  </div>
+
+  <div class="logcontainer">
+    <div>&nbsp;Texte:</div>
+        <dx-list 
+            id="log" 
+            [width]="400" 
+            [height]="300" 
+            [items]="logItems"
+            showScrollbar="always">
+        </dx-list>
+  </div>
+
+  <dx-context-menu 
+        [dataSource]="menuItems" 
+        target="#treeview .dx-treeview-item"
+        (onItemClick)="contextMenuItemClick($event)">
+    </dx-context-menu>   
 </div>
+
