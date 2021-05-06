@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder:FormBuilder) {}
+
+  infoForm = this.formBuilder.group({
+    suchtAsyl:['']
+  }) 
 
   ngOnInit(): void {
+  }
+
+  saveForm(){
+    console.log('Form data is ', this.infoForm.value);
   }
 
 }
