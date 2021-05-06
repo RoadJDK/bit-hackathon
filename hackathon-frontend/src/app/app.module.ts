@@ -13,6 +13,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { LanguageComponent } from './language/language.component';
+import { ProcessComponent } from './process/process.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LanguageComponent } from './language/language.component';
     FormComponent,
     ResourcesComponent,
     LanguageComponent,
+    ProcessComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
